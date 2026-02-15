@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s \"C:\\\\My Projects\\\\timbermountain\\\\timbermountain\\\\src\")",
+      "Bash(powershell:*)",
+      "Bash(node:*)",
+      "Bash(dir /s \"C:\\\\My Projects\\\\timbermountain\\\\timber-mountain-app\")",
+      "Bash(npm run build:*)",
+      "Bash(npx vite:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
