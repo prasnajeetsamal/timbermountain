@@ -114,18 +114,24 @@ const Attractions = ({ onNavigate }) => (
 const Accommodations = () => (
   <div style={{ maxWidth: 1200, margin: "0 auto", padding: "50px 30px 10px" }}>
     <h2 style={{ fontSize: 28, fontWeight: 700, color: darkGreen, textAlign: "center", marginBottom: 28 }}>Accommodations</h2>
-    <div style={{ background: "#fff", borderRadius: 10, overflow: "hidden", border: "1px solid #e0d8cc", display: "flex" }}>
-      <div style={{ width: 360, flexShrink: 0, overflow: "hidden" }}><img src={IMG.hotel} alt="Hotel" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} /></div>
-      <div style={{ flex: 1, padding: "30px 36px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-        <h3 style={{ fontSize: 20, fontWeight: 700, color: darkGreen, marginBottom: 10 }}>Experience the Timber Mountain Hotel</h3>
-        <p style={{ fontSize: 14, color: "#555", lineHeight: 1.6, fontFamily: "Helvetica,Arial,sans-serif", marginBottom: 14 }}>Relax in rustic elegance at the Timber Mountain Hotel, just steps from the park entrance.</p>
+    <div style={{ background: "#fff", borderRadius: 10, overflow: "hidden", border: "1px solid #e0d8cc", display: "flex", padding: 16 }}>
+      {/* Image container with rounded corners and scale fix */}
+      <div style={{ width: "40%", flexShrink: 0, borderRadius: 12, overflow: "hidden", position: "relative" }}>
+        <img src={IMG.hotel} alt="Hotel" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transform: "scale(1.35)" }} />
+      </div>
+      <div style={{ flex: 1, padding: "0 0 0 24px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <h3 style={{ fontSize: 20, fontWeight: 700, color: darkGreen, marginBottom: 6 }}>Experience the Timber Mountain Hotel</h3>
+        <p style={{ fontSize: 13, color: "#555", lineHeight: 1.5, fontFamily: "Helvetica,Arial,sans-serif", marginBottom: 10 }}>Relax in rustic elegance at the Timber Mountain Hotel, just steps from the park entrance.</p>
         {["Skip-the-line passes to Timber Mountain", "Walking distance to Timber Mountain", "Priority restaurant reservations"].map(f => (
-          <div key={f} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-            <img src={IMG.treeIcon} alt="" style={{ width: 14, height: 14 }} />
+          <div key={f} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+            {/* Inline SVG Tree Icon */}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill={darkGreen} xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z" />
+            </svg>
             <span style={{ fontSize: 13, color: "#555", fontFamily: "Helvetica,Arial,sans-serif" }}>{f}</span>
           </div>
         ))}
-        <button style={{ marginTop: 16, background: darkGreen, color: "#fff", border: "none", padding: "10px 24px", borderRadius: 6, fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "Helvetica,Arial,sans-serif", alignSelf: "flex-start" }}>Check Availability</button>
+        <button style={{ marginTop: 12, background: "transparent", color: darkGreen, border: `1px solid ${darkGreen}`, padding: "8px 20px", borderRadius: 6, fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "Helvetica,Arial,sans-serif", alignSelf: "flex-start" }}>Check Availability</button>
       </div>
     </div>
   </div>
