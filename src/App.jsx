@@ -73,7 +73,7 @@ const Hero = () => (
 );
 
 const QuoteBanner = () => (
-  <div style={{ maxWidth: 1000, margin: "-90px auto 0", position: "relative", zIndex: 5, background: "#fff", border: "1px solid #e0d8cc", borderRadius: 12, padding: "28px 36px", textAlign: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
+  <div style={{ maxWidth: 1150, margin: "-90px auto 0", position: "relative", zIndex: 5, background: "#fff", border: "1.5px solid #C9A96E", borderRadius: 12, padding: "34px 36px", textAlign: "center", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
     <div style={{ fontSize: 22, fontWeight: 700, color: darkGreen, lineHeight: 1.35, fontFamily: "Georgia,serif" }}>&ldquo;Prepare for a majestic, action-packed day&rdquo;</div>
     <div style={{ fontSize: 13, color: "#6a6a6a", marginTop: 4 }}>&#x2014; TripAdvisor &ldquo;Best of the Bay&rdquo; 2025</div>
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "14px auto", maxWidth: 400 }}>
@@ -83,7 +83,7 @@ const QuoteBanner = () => (
       <div style={{ flex: 1, height: 1.5, background: darkGreen, margin: "0 6px" }} />
       <span style={{ color: darkGreen, fontSize: 8 }}>&#9670;</span>
     </div>
-    <div style={{ fontSize: 14, color: "#5a5a5a", lineHeight: 1.6, fontFamily: "Helvetica,Arial,sans-serif", maxWidth: 700, margin: "0 auto" }}>Experience high-octane roller coasters, enchanting attractions, and rousing shows within a mystical, mountainous Northern California forest.</div>
+    <div style={{ fontSize: 14, color: "#5a5a5a", lineHeight: 1.6, fontFamily: "Helvetica,Arial,sans-serif", maxWidth: 850, margin: "0 auto" }}>Experience high-octane roller coasters, enchanting attractions, and rousing shows within a mystical, mountainous Northern California forest.</div>
   </div>
 );
 
@@ -96,7 +96,7 @@ const Attractions = ({ onNavigate }) => (
         { img: IMG.eagle, title: "Wings of the West", desc: "Watch in wonder at the winged stars of this show soar overhead and performing daring feats." },
         { img: IMG.cascade, title: "Cascade Canyon", desc: "Brave roaring rapids, swirling currents, and wild waterfalls in this soaking adventure." },
       ].map(a => (
-        <div key={a.title} style={{ background: "#fff", borderRadius: 10, overflow: "hidden", border: "1px solid #e0d8cc", transition: "transform 0.25s, box-shadow 0.25s", cursor: "pointer" }}
+        <div key={a.title} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", border: "1.5px solid #C9A96E", transition: "transform 0.25s, box-shadow 0.25s", cursor: "pointer" }}
           onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.12)"; }}
           onMouseLeave={e => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}>
           <div style={{ height: 180, overflow: "hidden" }}><img src={a.img} alt={a.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} /></div>
@@ -114,7 +114,7 @@ const Attractions = ({ onNavigate }) => (
 const Accommodations = () => (
   <div style={{ maxWidth: 1200, margin: "0 auto", padding: "50px 30px 10px" }}>
     <h2 style={{ fontSize: 28, fontWeight: 700, color: darkGreen, textAlign: "center", marginBottom: 28 }}>Accommodations</h2>
-    <div style={{ background: "#fff", borderRadius: 10, overflow: "hidden", border: "1px solid #e0d8cc", display: "flex", padding: 16 }}>
+    <div style={{ background: "#fff", borderRadius: 12, overflow: "hidden", border: "1.5px solid #C9A96E", display: "flex", padding: 16 }}>
       {/* Image container with rounded corners and scale fix */}
       <div style={{ width: "40%", flexShrink: 0, borderRadius: 12, overflow: "hidden", position: "relative" }}>
         <img src={IMG.hotel} alt="Hotel" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transform: "scale(1.35)" }} />
@@ -1445,8 +1445,9 @@ const SectionLabel = ({ children }) => (
 
 const LandingPage = ({ onSelectTest }) => (
   <div style={{
-    minHeight: "100vh", fontFamily: "Georgia,serif",
-    backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed"
+    maxWidth: 1200, margin: "0 auto", minHeight: "100vh", fontFamily: "Georgia,serif",
+    borderLeft: "1px solid #e0d8cc", borderRight: "1px solid #e0d8cc",
+    backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed"
   }}>
 
     {/* Hero header */}
@@ -1681,7 +1682,7 @@ export default function TimberMountainApp() {
   /* Nav inner pages */
   if (currentView === "attractions") {
     return (
-      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
         <AttractionsPage onNavigate={handleNavigate} onBack={handleBackFromInnerPage} onHome={handleGoHome} />
         <style>{globalStyles}</style>
       </div>
@@ -1689,7 +1690,7 @@ export default function TimberMountainApp() {
   }
   if (currentView === "experiences") {
     return (
-      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
         <ExperiencesPage onNavigate={handleNavigate} onBack={handleBackFromInnerPage} onHome={handleGoHome} />
         <style>{globalStyles}</style>
       </div>
@@ -1697,7 +1698,7 @@ export default function TimberMountainApp() {
   }
   if (currentView === "hotels") {
     return (
-      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
         <HotelsPage onNavigate={handleNavigate} onBack={handleBackFromInnerPage} onHome={handleGoHome} />
         <style>{globalStyles}</style>
       </div>
@@ -1705,7 +1706,7 @@ export default function TimberMountainApp() {
   }
   if (currentView === "plan-visit") {
     return (
-      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
         <PlanVisitPage onNavigate={handleNavigate} onBack={handleBackFromInnerPage} onHome={handleGoHome} onStartPlanning={handleStartPlanning} />
         <style>{globalStyles}</style>
       </div>
@@ -1734,7 +1735,7 @@ export default function TimberMountainApp() {
 
         <div style={{
           flex: 1, marginLeft: sW, transition: "margin-left 0.3s ease",
-          backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed"
+          backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed"
         }}>
           <div key={resultsVariant} style={{ animation: "pageIn 0.35s ease" }}>
             {resultsVariant === "control"
@@ -1773,7 +1774,7 @@ export default function TimberMountainApp() {
           <div key={homeVariant} style={{ animation: "pageIn 0.35s ease" }}>
             {/* Control: default homepage without trip planner */}
             {homeVariant === "control" && (
-              <div style={{ maxWidth: 1200, margin: "0 auto", minHeight: "100vh", borderLeft: "1px solid #e0d8cc", borderRight: "1px solid #e0d8cc", backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+              <div style={{ maxWidth: 1200, margin: "0 auto", minHeight: "100vh", borderLeft: "1px solid #e0d8cc", borderRight: "1px solid #e0d8cc", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
                 <Nav onNavigate={handleNavigate} onHome={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
                 <Hero />
                 <QuoteBanner />
@@ -1785,7 +1786,7 @@ export default function TimberMountainApp() {
             )}
             {/* Variation A: homepage with marketing module */}
             {homeVariant === "varA" && (
-              <div style={{ maxWidth: 1200, margin: "0 auto", minHeight: "100vh", borderLeft: "1px solid #e0d8cc", borderRight: "1px solid #e0d8cc", backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+              <div style={{ maxWidth: 1200, margin: "0 auto", minHeight: "100vh", borderLeft: "1px solid #e0d8cc", borderRight: "1px solid #e0d8cc", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
                 <Nav onNavigate={handleNavigate} onHome={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
                 <Hero />
                 <QuoteBanner />
@@ -1798,7 +1799,7 @@ export default function TimberMountainApp() {
             )}
             {/* Variation B: homepage with interactive wizard */}
             {homeVariant === "varB" && (
-              <div style={{ maxWidth: 1200, margin: "0 auto", minHeight: "100vh", borderLeft: "1px solid #e0d8cc", borderRight: "1px solid #e0d8cc", backgroundImage: `url(${IMG.bg})`, backgroundSize: "200px", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+              <div style={{ maxWidth: 1200, margin: "0 auto", minHeight: "100vh", borderLeft: "1px solid #e0d8cc", borderRight: "1px solid #e0d8cc", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
                 <Nav onNavigate={handleNavigate} onHome={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
                 <Hero />
                 <QuoteBanner />
