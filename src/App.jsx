@@ -47,13 +47,15 @@ const navItems = ["Attractions", "Experiences", "Hotels", "Plan Your Visit"];
 const navPageMap = { "Attractions": "attractions", "Experiences": "experiences", "Hotels": "hotels", "Plan Your Visit": "plan-visit" };
 
 const Nav = ({ onNavigate, onHome }) => (
-  <nav style={{ background: "#1f3724", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px", height: 56, position: "sticky", top: 0, zIndex: 40 }}>
-    <span onClick={() => onHome && onHome()} style={{ color: gold, fontSize: 16, fontWeight: 700, letterSpacing: 2, fontFamily: "Georgia,serif", textTransform: "uppercase", textShadow: "0 1px 2px rgba(0,0,0,0.3)", cursor: "pointer", transition: "opacity 0.2s" }}
-      onMouseEnter={e => { e.currentTarget.style.opacity = "0.7"; }} onMouseLeave={e => { e.currentTarget.style.opacity = "1"; }}>Timber Mountain</span>
-    <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
+  <nav style={{ background: "#1f3724", display: "flex", alignItems: "center", padding: "0 24px", height: 80, position: "sticky", top: 0, zIndex: 40 }}>
+    <span onClick={() => onHome && onHome()} style={{ marginRight: "auto", position: "relative", color: gold, fontSize: 24, fontWeight: 400, letterSpacing: 1, fontFamily: '"Rye", serif', textTransform: "uppercase", textShadow: "0 3px 6px rgba(0,0,0,0.5)", cursor: "pointer", transition: "opacity 0.2s" }}
+      onMouseEnter={e => { e.currentTarget.style.opacity = "0.7"; }} onMouseLeave={e => { e.currentTarget.style.opacity = "1"; }}>
+      TIMBER MOUNTAIN
+    </span>
+    <div style={{ display: "flex", gap: 24, alignItems: "center", marginRight: 40 }}>
       {navItems.map(t => (
         <span key={t} onClick={() => onNavigate && onNavigate(navPageMap[t])}
-          style={{ color: gold, fontSize: 13, cursor: "pointer", fontFamily: "Helvetica,Arial,sans-serif", transition: "opacity 0.2s" }}
+          style={{ color: gold, fontSize: 15, cursor: "pointer", fontFamily: "Georgia,serif", letterSpacing: 0.5, transition: "opacity 0.2s" }}
           onMouseEnter={e => { e.currentTarget.style.opacity = "0.7"; }} onMouseLeave={e => { e.currentTarget.style.opacity = "1"; }}>{t}</span>
       ))}
     </div>
@@ -61,7 +63,7 @@ const Nav = ({ onNavigate, onHome }) => (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ cursor: "pointer" }}><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ cursor: "pointer" }}><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={gold} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ cursor: "pointer" }}><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
-      <button style={{ background: "transparent", color: gold, border: `1px solid ${gold}`, padding: "6px 18px", borderRadius: 4, fontSize: 12, fontWeight: 600, cursor: "pointer", fontFamily: "Helvetica,Arial,sans-serif" }}>Buy Tickets</button>
+      <button style={{ background: gold, color: darkGreen, border: "none", padding: "8px 20px", borderRadius: 4, fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: "Georgia,serif" }}>Buy Tickets</button>
     </div>
   </nav>
 );
