@@ -8,7 +8,7 @@ import imgCascade from "./assets/images/Timber_Mountain_Cascade_Canyon_Midjourne
 import imgHotel from "./assets/images/Timber_Mountain_Hotel_Midjourney.png";
 import imgMap from "./assets/images/Map.webp";
 import imgBg from "./assets/images/western-textured-background-midjourney.png";
-import imgWilly from "./assets/images/wild willy.webp";
+import imgWilly from "./assets/images/wild_willy_transparent.png";
 import imgTreeIcon from "./assets/images/tree-icon-green-2C3F2A.png";
 import imgAirplane from "./assets/images/noun-air-plane-icon-2125167.svg";
 import imgHotelIcon from "./assets/images/noun-hotel-icon-2116568.svg";
@@ -167,8 +167,8 @@ const TripPlannerWizard = ({ onStartPlanning }) => {
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "50px 30px 10px" }}>
       <h2 style={{ fontSize: 28, fontWeight: 700, color: darkGreen, textAlign: "center", marginBottom: 28 }}>Let Us Help You Plan Your Trip</h2>
       <div style={{ background: "#fff", border: "1.5px solid #c9a96e", borderRadius: 14, display: "flex", overflow: "hidden", minHeight: 360 }}>
-        <div style={{ width: 220, flexShrink: 0, display: "flex", alignItems: "flex-end", justifyContent: "center", background: "linear-gradient(to top, #f5f0e8, #fff)" }}>
-          <img src={IMG.willy} alt="Wild Willy" style={{ height: 360, objectFit: "contain", display: "block", marginBottom: -4 }} />
+        <div style={{ width: 220, flexShrink: 0, display: "flex", alignItems: "flex-end", justifyContent: "center", background: "transparent" }}>
+          <img src={IMG.willy} alt="Wild Willy" style={{ height: 380, objectFit: "contain", display: "block", marginBottom: -4 }} />
         </div>
         <div style={{ flex: 1, padding: "32px 40px 32px 20px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <h3 style={{ fontSize: 19, fontWeight: 700, color: darkGreen, marginBottom: 16, lineHeight: 1.35 }}>Plan your vacation with Wild Willy, our AI-powered travel planner!</h3>
