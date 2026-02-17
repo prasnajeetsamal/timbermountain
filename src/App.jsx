@@ -358,7 +358,7 @@ const TripPlannerResults = ({ selections, onBack, onNavigate, onHome }) => {
   if (party.children > 0) partyTags.push(`${party.children} Child${party.children > 1 ? "ren" : ""}`);
 
   return (
-    <div style={{ animation: "pageIn 0.4s ease", maxWidth: 1200, margin: "0 auto", background: "#fff", boxShadow: "0 0 20px rgba(0,0,0,0.1)", minHeight: "100vh" }}>
+    <div style={{ animation: "pageIn 0.4s ease", maxWidth: 1200, margin: "0 auto", background: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed", boxShadow: "0 0 20px rgba(0,0,0,0.1)", minHeight: "100vh" }}>
       <Nav onNavigate={onNavigate} onHome={onHome} />
 
       {/* Trip Summary Banner with Hero Image */}
@@ -636,7 +636,7 @@ const TripPlannerResultsVariation = ({ selections, onBack, showDescription = tru
   const currentItinerary = itineraries.find(it => it.id === selectedItinerary);
 
   return (
-    <div style={{ animation: "pageIn 0.4s ease", maxWidth: 1200, margin: "0 auto", background: "#fff", boxShadow: "0 0 20px rgba(0,0,0,0.1)", minHeight: "100vh" }}>
+    <div style={{ animation: "pageIn 0.4s ease", maxWidth: 1200, margin: "0 auto", background: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed", boxShadow: "0 0 20px rgba(0,0,0,0.1)", minHeight: "100vh" }}>
       <Nav onNavigate={onNavigate} onHome={onHome} />
 
       {/* Trip Summary Banner with Hero Image */}
@@ -1737,7 +1737,7 @@ export default function TimberMountainApp() {
 
         <div style={{
           flex: 1, marginLeft: sW, transition: "margin-left 0.3s ease",
-          backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed"
+          backgroundImage: `#fff)`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed"
         }}>
           <div key={resultsVariant} style={{ animation: "pageIn 0.35s ease" }}>
             {resultsVariant === "control"
