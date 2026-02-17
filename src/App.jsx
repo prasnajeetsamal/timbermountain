@@ -69,7 +69,8 @@ const Nav = ({ onNavigate, onHome }) => (
 );
 
 const Hero = () => (
-  <div style={{ position: "relative", aspectRatio: "21/9", width: "100%", overflow: "hidden" }}>
+  // <div style={{ position: "relative", aspectRatio: "21/9", width: "100%", overflow: "hidden" }}>
+    <div style={{ position: "relative", height: 400, width: "100%", overflow: "hidden" }}>
     <img src={IMG.hero} alt="Timber Mountain" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
   </div>
 );
