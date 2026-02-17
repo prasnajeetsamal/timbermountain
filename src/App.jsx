@@ -386,9 +386,6 @@ const TripPlannerResults = ({ selections, onBack, onNavigate, onHome }) => {
       {/* AI Recommendation Section */}
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 30px 10px" }}>
         <div style={{ background: "#fff", border: `1.5px solid ${gold}`, borderRadius: 14, display: "flex", overflow: "hidden", minHeight: 260 }}>
-          <div style={{ width: 180, flexShrink: 0, display: "flex", alignItems: "flex-end", justifyContent: "center", background: "linear-gradient(to top, #f5f0e8, #fff)" }}>
-            <img src={IMG.willy} alt="Wild Willy" style={{ height: 260, objectFit: "contain", display: "block", marginBottom: -4 }} />
-          </div>
           <div style={{ flex: 1, padding: "28px 36px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div style={{ fontSize: 11, color: gold, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginBottom: 8, fontFamily: "Helvetica,Arial,sans-serif" }}>Wild Willy&apos;s Recommendation</div>
             <h3 style={{ fontSize: 20, fontWeight: 700, color: darkGreen, marginBottom: 12, lineHeight: 1.35 }}>
@@ -662,7 +659,6 @@ const TripPlannerResultsVariation = ({ selections, onBack, showDescription = tru
       </div>
 
       {/* 3 Itinerary Cards */}
-      {/* 3 Itinerary Cards */}
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 30px 10px" }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, color: darkGreen, textAlign: "center", marginBottom: 8, fontFamily: "Georgia,serif" }}>Choose Your Adventure</h2>
         <p style={{ fontSize: 14, color: "#888", textAlign: "center", marginBottom: 28, fontFamily: "Helvetica,Arial,sans-serif" }}>Select an itinerary below and book each part of your trip</p>
@@ -741,7 +737,6 @@ const TripPlannerResultsVariation = ({ selections, onBack, showDescription = tru
         </div>
       </div>
 
-      {/* Booking Details for Selected Itinerary */}
       {/* Booking Details for Selected Itinerary */}
       {currentItinerary && selectedInterests.length > 0 && (
         <div key={selectedItinerary} style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 30px 50px", animation: "slideUp 0.35s ease" }}>
