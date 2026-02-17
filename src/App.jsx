@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 /* ─── Image imports (from src/assets/images) ─── */
 import imgHero from "./assets/images/timber-mountain-sawdust-surge-coaster-hero-midjourney.jpg";
@@ -1663,7 +1663,7 @@ export default function TimberMountainApp() {
 
   const globalStyles = `
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; zoom: 0.75; }
     @keyframes pageIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
     @keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
     ::-webkit-scrollbar { width: 8px; }
