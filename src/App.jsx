@@ -1169,7 +1169,7 @@ const PlanVisitPage = ({ onNavigate, onBack, onHome, onStartPlanning }) => {
   };
 
   return (
-    <div style={{ animation: "pageIn 0.4s ease", maxWidth: 1200, margin: "0 auto", background: "#fff", boxShadow: "0 0 20px rgba(0,0,0,0.1)", minHeight: "100vh" }}>
+    <div style={{ animation: "pageIn 0.4s ease", maxWidth: 1200, margin: "0 auto", background: `url(${IMG.bg})`, boxShadow: "0 0 20px rgba(0,0,0,0.1)", minHeight: "100vh" }}>
       <Nav onNavigate={onNavigate} onHome={onHome} />
       {/* Page hero */}
       <div style={{ position: "relative", overflow: "hidden", padding: "50px 30px 40px", textAlign: "center" }}>
@@ -1703,7 +1703,7 @@ export default function TimberMountainApp() {
   }
   if (currentView === "plan-visit") {
     return (
-      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: `url(${IMG.bg})`, backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
+      <div style={{ minHeight: "100vh", fontFamily: "Georgia,serif", backgroundImage: "#fff", backgroundSize: "auto", backgroundRepeat: "repeat", backgroundAttachment: "fixed" }}>
         <PlanVisitPage onNavigate={handleNavigate} onBack={handleBackFromInnerPage} onHome={handleGoHome} onStartPlanning={handleStartPlanning} />
         <style>{globalStyles}</style>
       </div>
